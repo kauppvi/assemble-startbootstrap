@@ -1,8 +1,5 @@
 /*
  * assemble-examples <https://github.com/assemble/assemble-examples>
- *
- * Copyright (c) 2014 Jon Schlinkert, Brian Woodward, contributors.
- * Licensed under the MIT license.
  */
 
 
