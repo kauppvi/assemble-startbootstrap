@@ -28,8 +28,10 @@
   "devDependencies": {
     "assemble": "~0.4.37",
     "grunt": "~0.4.3",
+    "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-cssmin": "^2.0.0",
-    "grunt-contrib-uglify": "^2.2.0"
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0"
   },
   "keywords": []
 }

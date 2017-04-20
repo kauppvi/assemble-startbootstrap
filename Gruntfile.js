@@ -42,6 +42,29 @@ module.exports = function(grunt) {
                   ext: '.min.css'
                 }]
             }
+        },
+        connect: {
+            server: {
+                options: {
+                    port: 3001,
+                    base: 'docs',
+                    livereload: true
+                }
+            }
+        },
+        watch: {
+            css: {
+                files: ['templates/styles/*.css'],
+                tasks: ['cssmin']
+            },
+            js: {
+                files: ['templates/scripts/*.js'],
+                tasks: ['uglify']
+            },
+            html: {
+                files: ['templates/*.hbs','templates/includes/*.hbs','templates/layouts/*.hbs'],
+                tasks: ['assemble']
+            }
         }
     });
 
@@ -51,7 +74,13 @@ module.exports = function(grunt) {
 
     // Load the Assemble plugin.
     grunt.loadNpmTasks('assemble');
-
+    
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    
     // The default task to run with the `grunt` command.
     grunt.registerTask('default', ['uglify','cssmin','assemble']);
+    
+    // Start web server
+    grunt.registerTask('serve', ['connect:server','watch']);
 };
