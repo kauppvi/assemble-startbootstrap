@@ -69,13 +69,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');    
 
-    // Load the Assemble plugin.
+    // Load the Assemble plugin
     grunt.loadNpmTasks('assemble');
     
+    // Load dev tools
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
     
-    // The default task to run with the `grunt` command.
+    // The default task to run with the `grunt` command
     grunt.registerTask('default', ['uglify','cssmin','assemble']);
     
     // Start web server
