@@ -9,3 +9,9 @@ Static site generator for Github pages using
 See
 
 [Demo site](https://kauppvi.github.io/assemble-startbootstrap/)
+
+Start dev server
+
+```
+grunt serve
+```
